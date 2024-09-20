@@ -1,0 +1,40 @@
+.wrapper {
+  padding: 10px
+}
+
+.wrapper input {
+  height: 40px;
+  left: 0;
+  opacity: 0;
+  top: 0; 
+  width: 40px; 
+
+}
+
+.wrapper input + label::before {
+  border: 2px solid;
+  content: "";
+  height: 40px;
+  left: 0;
+  top: 0;
+  width: 40px;
+}
+
+.wrapper input + label::after {
+  content: "";
+  border: 4px solid;
+  border-left: 0;
+  border-top: 0;
+  height: 20px;
+  left: 14px;
+  opacity: 0;
+  position: absolute;
+  top: 6px;
+  transform: rotate(45deg);
+  transition: opacity 0.2 ease-in-out;
+  width: 12px;
+}
+
+.wrapper input:checked + label::after {
+  opacity: 1;
+}
